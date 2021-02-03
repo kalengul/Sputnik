@@ -1,0 +1,20 @@
+program Spytnik;
+
+uses
+  Forms,
+  UMainForm in 'UMainForm.pas' {Form1},
+  UAddStation in 'UAddStation.pas' {NSozdStation},
+  UObj in 'UObj.pas',
+  UAddSattelite in 'UAddSattelite.pas' {FAddSattelite},
+  UViborStation in 'UViborStation.pas' {FViborStation};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TNSozdStation, NSozdStation);
+  Application.CreateForm(TFAddSattelite, FAddSattelite);
+  Application.CreateForm(TFViborStation, FViborStation);
+  Application.Run;
+end.
